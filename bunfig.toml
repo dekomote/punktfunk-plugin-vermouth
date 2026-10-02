@@ -1,0 +1,4 @@
+# Resolve the @punktfunk scope from the Gitea npm registry for the whole workspace.
+[install.scopes]
+"@punktfunk" = "https://git.unom.io/api/packages/unom/npm/"
+"@unom" = "https://git.unom.io/api/packages/unom/npm/"

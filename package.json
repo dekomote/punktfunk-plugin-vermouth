@@ -1,0 +1,75 @@
+{
+	"name": "@punktfunk/plugin-vermouth",
+	"version": "0.8.0",
+	"private": false,
+	"type": "module",
+	"description": "Punktfunk plugin: adds your Vermouth game library (Proton, Wine, native, Steam, retro) to the host's library and launches each title through Vermouth.",
+	"license": "MIT OR Apache-2.0",
+	"keywords": [
+		"punktfunk",
+		"plugin",
+		"vermouth",
+		"proton",
+		"wine",
+		"game-library",
+		"game-streaming"
+	],
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"bin": {
+		"punktfunk-plugin-vermouth": "./dist/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "bun test",
+		"build": "bun build src/index.ts --target=bun --outdir dist --external effect --external '@punktfunk/*'",
+		"prepublishOnly": "bun run build",
+		"check": "bunx biome check ."
+	},
+	"dependencies": {
+		"@punktfunk/plugin-kit": "^0.9.0",
+		"effect": "4.0.0-beta.99"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.2",
+		"@types/bun": "^1.3.0",
+		"typescript": "^5.9.3"
+	},
+	"punktfunk": {
+		"schema": 1,
+		"id": "vermouth",
+		"reads": [
+			"~/.config/vermouth",
+			"~/.var/app/com.dekomote.vermouth/config/vermouth",
+			"~/.local/share/vermouth/assets",
+			"~/.var/app/com.dekomote.vermouth/data/vermouth/assets"
+		],
+		"exec": {
+			"play": {
+				"exe": "vermouth",
+				"args": [
+					"--launch-id",
+					"{id}"
+				],
+				"params": {
+					"id": "id"
+				}
+			},
+			"play-flatpak": {
+				"exe": "flatpak",
+				"args": [
+					"run",
+					"com.dekomote.vermouth",
+					"--launch-id",
+					"{id}"
+				],
+				"params": {
+					"id": "id"
+				}
+			}
+		}
+	}
+}
