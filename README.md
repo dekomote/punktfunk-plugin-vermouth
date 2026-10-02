@@ -1,6 +1,6 @@
 # @punktfunk/plugin-vermouth
 
-Adds the games in your [Vermouth](https://github.com/dekomote/vermouth) launcher to a Punktfunk
+Adds the games in your [Vermouth](https://github.com/dekomote/vermouth) launcher to a [Punktfunk](https://punktfunk.unom.io/en/)
 host's library, and launches each one through Vermouth (`vermouth --launch-id <uuid>`), so Proton /
 Wine / umu / launch options / MangoHud settings you configured in Vermouth apply as usual.
 
