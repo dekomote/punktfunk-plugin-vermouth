@@ -1,10 +1,18 @@
 {
-	"name": "@punktfunk/plugin-vermouth",
+	"name": "@dekomote/plugin-vermouth",
 	"version": "0.8.0",
 	"private": false,
 	"type": "module",
 	"description": "Punktfunk plugin: adds your Vermouth game library (Proton, Wine, native, Steam, retro) to the host's library and launches each title through Vermouth.",
-	"license": "MIT OR Apache-2.0",
+	"license": "MIT",
+	"homepage": "https://github.com/dekomote/punktfunk-plugin-vermouth",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dekomote/punktfunk-plugin-vermouth.git"
+	},
+	"bugs": {
+		"url": "https://github.com/dekomote/punktfunk-plugin-vermouth/issues"
+	},
 	"keywords": [
 		"punktfunk",
 		"plugin",
@@ -20,7 +28,8 @@
 		"punktfunk-plugin-vermouth": "./dist/index.js"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"LICENSE"
 	],
 	"scripts": {
 		"typecheck": "tsc --noEmit",
@@ -71,5 +80,8 @@
 				}
 			}
 		}
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
