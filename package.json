@@ -1,6 +1,6 @@
 {
 	"name": "@dekomote/plugin-vermouth",
-	"version": "0.8.0",
+	"version": "0.8.1",
 	"private": false,
 	"type": "module",
 	"description": "Punktfunk plugin: adds your Vermouth game library (Proton, Wine, native, Steam, retro) to the host's library and launches each title through Vermouth.",

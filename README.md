@@ -15,10 +15,22 @@ punktfunk-host plugins add @dekomote/plugin-vermouth
 - Settings (Library → Game sources → Vermouth): native vs Flatpak install, custom config folder.
 - Art: Vermouth's cached grid / hero / logo images are passed as `file://` URLs for the host to serve (needs read access to Vermouth's `assets` folder, requested via the console).
 
+## Commands
+
+The package installs a `punktfunk-plugin-vermouth` binary into the host's plugins folder (it is not
+put on your `PATH`):
+
 ```sh
-bun src/index.ts detect
-bun src/index.ts scan --preview
-bun install && bun run typecheck && bun test && bun run build
+~/.config/punktfunk/plugins/node_modules/.bin/punktfunk-plugin-vermouth detect          # is Vermouth set up here?
+~/.config/punktfunk/plugins/node_modules/.bin/punktfunk-plugin-vermouth scan --preview  # what WOULD be synced, as JSON
+```
+
+## Development
+
+```sh
+bun install
+bun run typecheck && bun test && bun run build
+bun src/index.ts scan --preview     # run the CLI from source
 ```
 
 ## License
