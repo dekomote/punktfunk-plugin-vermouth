@@ -5,7 +5,7 @@ host's library, and launches each one through Vermouth (`vermouth --launch-id <u
 Wine / umu / launch options / MangoHud settings you configured in Vermouth apply as usual.
 
 ```sh
-punktfunk-host plugins add @dekomote/plugin-vermouth
+punktfunk-host plugins add @dekomote/plugin-vermouth --allow-public-registry
 ```
 
 - Reads `~/.config/vermouth/apps.json` (or the Flatpak's `~/.var/app/com.dekomote.vermouth/...`).

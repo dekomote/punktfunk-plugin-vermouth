@@ -5,6 +5,7 @@
     "": {
       "name": "@punktfunk/plugin-vermouth",
       "dependencies": {
+        "@punktfunk/host": "^0.3.0",
         "@punktfunk/plugin-kit": "^0.9.0",
         "effect": "4.0.0-beta.99",
       },
